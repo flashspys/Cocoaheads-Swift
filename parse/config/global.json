@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "Cocoaheads": {
+            "applicationId": "4i1XnEMHmSZtGIlBF0u8ZNL60OpWUTziqxm2x5lf", 
+            "masterKey": "2Nrj7g2sfnSl3D1wj4kjSIHPlBKIkZ6Mf3KQQ8Re"
+        }, 
+        "_default": {
+            "link": "Cocoaheads"
+        }
+    }
+}
