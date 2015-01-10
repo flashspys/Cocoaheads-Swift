@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DCAC176C1A5BC906009DA01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC176B1A5BC906009DA01F /* AppDelegate.swift */; };
-		DCAC176E1A5BC906009DA01F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC176D1A5BC906009DA01F /* ViewController.swift */; };
+		DCAC176E1A5BC906009DA01F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC176D1A5BC906009DA01F /* MapViewController.swift */; };
 		DCAC17711A5BC906009DA01F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC176F1A5BC906009DA01F /* Main.storyboard */; };
 		DCAC17731A5BC907009DA01F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAC17721A5BC907009DA01F /* Images.xcassets */; };
 		DCAC17761A5BC907009DA01F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAC17741A5BC907009DA01F /* LaunchScreen.xib */; };
@@ -29,7 +29,10 @@
 		DCAC17A71A5BC9C5009DA01F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17A61A5BC9C5009DA01F /* libsqlite3.dylib */; };
 		DCAC17AD1A5BD413009DA01F /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */; };
 		DCAC17AF1A5BD7C7009DA01F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */; };
-		DCAC17B11A5BD920009DA01F /* CHMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC17B01A5BD920009DA01F /* CHMapAnnotation.swift */; };
+		DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */; };
+		DCCECF9A1A60B2EA00CC89AF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF991A60B2EA00CC89AF /* ListViewController.swift */; };
+		DCCECF9C1A60B3D900CC89AF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */; };
+		DCCECF9E1A60C44C00CC89AF /* MeetingQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF9D1A60C44C00CC89AF /* MeetingQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,7 @@
 		DCAC17661A5BC906009DA01F /* Cocoaheads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocoaheads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAC176A1A5BC906009DA01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCAC176B1A5BC906009DA01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCAC176D1A5BC906009DA01F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCAC176D1A5BC906009DA01F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DCAC17701A5BC906009DA01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCAC17721A5BC907009DA01F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DCAC17751A5BC907009DA01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -70,7 +73,10 @@
 		DCAC17A81A5BCA66009DA01F /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		DCAC17B01A5BD920009DA01F /* CHMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHMapAnnotation.swift; sourceTree = "<group>"; };
+		DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		DCCECF991A60B2EA00CC89AF /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		DCCECF9D1A60C44C00CC89AF /* MeetingQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 				DCAC179F1A5BC9A4009DA01F /* Security.framework in Frameworks */,
 				DCAC179D1A5BC99F009DA01F /* QuartzCore.framework in Frameworks */,
 				DCAC179B1A5BC995009DA01F /* MobileCoreServices.framework in Frameworks */,
+				DCCECF9C1A60B3D900CC89AF /* ParseUI.framework in Frameworks */,
 				DCAC17991A5BC98B009DA01F /* CoreGraphics.framework in Frameworks */,
 				DCAC17971A5BC983009DA01F /* CoreLocation.framework in Frameworks */,
 				DCAC17951A5BC97E009DA01F /* CFNetwork.framework in Frameworks */,
@@ -129,8 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				DCAC176B1A5BC906009DA01F /* AppDelegate.swift */,
-				DCAC176D1A5BC906009DA01F /* ViewController.swift */,
-				DCAC17B01A5BD920009DA01F /* CHMapAnnotation.swift */,
+				DCAC176D1A5BC906009DA01F /* MapViewController.swift */,
+				DCCECF991A60B2EA00CC89AF /* ListViewController.swift */,
+				DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */,
+				DCCECF9D1A60C44C00CC89AF /* MeetingQuery.swift */,
 				DCAC176F1A5BC906009DA01F /* Main.storyboard */,
 				DCAC17721A5BC907009DA01F /* Images.xcassets */,
 				DCAC17741A5BC907009DA01F /* LaunchScreen.xib */,
@@ -169,6 +178,7 @@
 		DCAC17911A5BC947009DA01F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */,
 				DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */,
 				DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */,
 				DCAC17A61A5BC9C5009DA01F /* libsqlite3.dylib */,
@@ -306,8 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCAC176E1A5BC906009DA01F /* ViewController.swift in Sources */,
-				DCAC17B11A5BD920009DA01F /* CHMapAnnotation.swift in Sources */,
+				DCAC176E1A5BC906009DA01F /* MapViewController.swift in Sources */,
+				DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */,
+				DCCECF9A1A60B2EA00CC89AF /* ListViewController.swift in Sources */,
+				DCCECF9E1A60C44C00CC89AF /* MeetingQuery.swift in Sources */,
 				DCAC176C1A5BC906009DA01F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +448,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Cocoaheads",
 				);
 				INFOPLIST_FILE = Cocoaheads/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,6 +466,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Cocoaheads",
 				);
 				INFOPLIST_FILE = Cocoaheads/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,6 +528,7 @@
 				DCAC17871A5BC907009DA01F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCAC17881A5BC907009DA01F /* Build configuration list for PBXNativeTarget "CocoaheadsTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +537,7 @@
 				DCAC178A1A5BC907009DA01F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

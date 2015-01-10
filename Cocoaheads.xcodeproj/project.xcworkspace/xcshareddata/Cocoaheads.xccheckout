@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16D5C860-C2E1-4072-8620-D2D468A244F2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Cocoaheads</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7BAB8B266DAD2B1D92369803298110686C544C14</key>
+		<string>github.com:flashspys/Cocoaheads-Swift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Cocoaheads.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7BAB8B266DAD2B1D92369803298110686C544C14</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:flashspys/Cocoaheads-Swift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7BAB8B266DAD2B1D92369803298110686C544C14</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7BAB8B266DAD2B1D92369803298110686C544C14</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cocoaheads</string>
+		</dict>
+	</array>
+</dict>
+</plist>
