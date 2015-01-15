@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
         
+        PFAnonymousUtils.logInInBackground();
+        
         return true
     }
 

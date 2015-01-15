@@ -20,7 +20,7 @@ class MapAnnotation : NSObject, MKAnnotation {
     }
     
     convenience init(meeting: PFObject) {
-        let coordinate = CLLocationCoordinate2D(latitude: meeting["Location"].latitude, longitude: meeting["Location"].longitude)
-        self.init(coordinate: coordinate, title: meeting["Name"] as String, subtitle: "")
+        let coordinate = CLLocationCoordinate2D(latitude: meeting["location"].latitude, longitude: meeting["location"].longitude)
+        self.init(coordinate: coordinate, title: meeting["name"] as String, subtitle: "")
     }
 }

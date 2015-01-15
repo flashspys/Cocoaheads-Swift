@@ -18,18 +18,23 @@ class MapViewController: UIViewController {
         
         PFGeoPoint.geoPointForCurrentLocationInBackground { (geopoint, error) -> Void in
             if (error == nil) {
-                let query = MeetingQuery()
-                query.whereKey("Location", nearGeoPoint: geopoint)
-                query.limit = 1000;
+                let query = LocationQuery()
+                query.whereKey("location", nearGeoPoint: geopoint)
                 query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
                     if error == nil {
                         if let meetings = objects as? Array<PFObject> {
                             self.loadLocations(meetings)
                         }
                     } else {
-                        println("Location not found: \(error.description)")
+                        if(error.code == kPFErrorCacheMiss) {
+                            println("Parse Cache is not available. Waiting for online response!")
+                        } else {
+                            println("Parse data error: \(error.description)")
+                        }
                     }
                 })
+            } else {
+                println("Location not found: \(error.description)")
             }
         }
         

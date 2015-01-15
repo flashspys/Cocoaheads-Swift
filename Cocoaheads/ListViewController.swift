@@ -9,9 +9,11 @@ import UIKit
 
 class ListViewController: PFQueryTableViewController {
     
+    var currentLocation: PFGeoPoint?
+    
     override func queryForTable() -> PFQuery! {
-        let query = MeetingQuery()
-        
+        let query = LocationQuery()
+        query.whereKey("location", nearGeoPoint: currentLocation)
         return query
     }
     
@@ -19,14 +21,20 @@ class ListViewController: PFQueryTableViewController {
         super.init(coder: aDecoder)
         
         
-        self.parseClassName = "CocoaheadsMeeting"
+        self.parseClassName = "Location"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = false
     }
     
-    override func viewDidLoad() {
+    func callSuperDidLoad() {
         super.viewDidLoad()
-        self.tableView.contentInset = UIEdgeInsetsMake(UIApplication.sharedApplication().statusBarFrame.height, 0, (self.tabBarController?.tabBar.frame.height)!-1, 0)
+    }
+    
+    override func viewDidLoad() {
+        PFGeoPoint.geoPointForCurrentLocationInBackground { (geopoint: PFGeoPoint?, error: NSError?) -> Void in
+            self.currentLocation = geopoint
+            self.callSuperDidLoad() // looks dirty. but is not dirty
+        }
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
@@ -34,14 +42,16 @@ class ListViewController: PFQueryTableViewController {
         
         let cellIdentifier = "cellIdentifier"
         
-        var cell: AnyObject? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
-        if cell == nil {
-            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? UITableViewCell
+        if (cell == nil) {
+            cell = PFTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
         }
         
-        if let lbl: UILabel = cell?.textLabel {
-            lbl.text = (object["Name"] as String)
-        }
+        
+        cell?.textLabel?.text = (object["name"] as String)
+        
+        let distance = String(format: "%.2f", (object["location"] as PFGeoPoint).distanceInKilometersTo(self.currentLocation))
+        cell?.detailTextLabel?.text = "\(distance) km"
 
         return cell as PFTableViewCell
         
@@ -55,7 +65,7 @@ class ListViewController: PFQueryTableViewController {
     override func objectsDidLoad(error: NSError!) {
         super.objectsDidLoad(error)
         if error != nil {
-            println("Objects loaded: \(error.description)")
+            println("Objects loaded with error: \(error.description)")
         } else {
             println("Objects loaded")
         }

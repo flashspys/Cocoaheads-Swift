@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MeetingQuery: PFQuery {
+class LocationQuery: PFQuery {
     
     override init() {
-        super.init(className: "CocoaheadsMeeting")
+        super.init(className: "Location")
         self.cachePolicy = kPFCachePolicyCacheThenNetwork
+        self.limit = 1000 // 1000 is max limit
     }
     
 }

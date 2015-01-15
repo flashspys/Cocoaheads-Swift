@@ -28,7 +28,7 @@
                             <constraint firstItem="f8x-GY-V0b" firstAttribute="top" secondItem="GYb-pA-FM2" secondAttribute="top" id="p1s-1q-7fx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="83T-lU-orK"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="position-map" id="83T-lU-orK"/>
                     <connections>
                         <outlet property="mapView" destination="f8x-GY-V0b" id="G6Y-tY-9Ci"/>
                     </connections>
@@ -58,11 +58,11 @@
                             <outlet property="delegate" destination="yui-ef-XKb" id="LYl-GY-XL0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="List" id="BOH-Fa-stj"/>
+                    <navigationItem key="navigationItem" title="List" id="3Hb-ZY-UIC"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYg-Hj-8bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760" y="552"/>
+            <point key="canvasLocation" x="1572" y="552"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GDs-sD-eM2">
@@ -76,12 +76,35 @@
                     </tabBar>
                     <connections>
                         <segue destination="z5D-uZ-ndf" kind="relationship" relationship="viewControllers" id="9NR-PB-0nf"/>
-                        <segue destination="yui-ef-XKb" kind="relationship" relationship="viewControllers" id="Vx8-I6-3ml"/>
+                        <segue destination="z96-3V-fPK" kind="relationship" relationship="viewControllers" id="Vx8-I6-3ml"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8U-AP-TYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-60" y="161"/>
         </scene>
+        <!--List-->
+        <scene sceneID="2Ys-dR-jK4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z96-3V-fPK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="unorderd-list" id="BOH-Fa-stj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eg4-4Y-sxl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yui-ef-XKb" kind="relationship" relationship="rootViewController" id="gdy-gv-XsS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ci8-0z-1SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="552"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="position-map" width="32" height="32"/>
+        <image name="unorderd-list" width="32" height="32"/>
+    </resources>
 </document>

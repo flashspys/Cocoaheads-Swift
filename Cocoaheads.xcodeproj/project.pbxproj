@@ -32,7 +32,7 @@
 		DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */; };
 		DCCECF9A1A60B2EA00CC89AF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF991A60B2EA00CC89AF /* ListViewController.swift */; };
 		DCCECF9C1A60B3D900CC89AF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */; };
-		DCCECF9E1A60C44C00CC89AF /* MeetingQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF9D1A60C44C00CC89AF /* MeetingQuery.swift */; };
+		DCCECF9E1A60C44C00CC89AF /* LocationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF9D1A60C44C00CC89AF /* LocationQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,7 @@
 		DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		DCCECF991A60B2EA00CC89AF /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		DCCECF9D1A60C44C00CC89AF /* MeetingQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingQuery.swift; sourceTree = "<group>"; };
+		DCCECF9D1A60C44C00CC89AF /* LocationQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationQuery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC6911A21A617A0200EE2693 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */,
+				DCCECF9D1A60C44C00CC89AF /* LocationQuery.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DC6911A31A617A0800EE2693 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DCAC176D1A5BC906009DA01F /* MapViewController.swift */,
+				DCCECF991A60B2EA00CC89AF /* ListViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		DC6911A41A617A1300EE2693 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCAC176F1A5BC906009DA01F /* Main.storyboard */,
+				DCAC17721A5BC907009DA01F /* Images.xcassets */,
+				DCAC17741A5BC907009DA01F /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		DCAC175D1A5BC906009DA01F = {
 			isa = PBXGroup;
 			children = (
@@ -136,13 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				DCAC176B1A5BC906009DA01F /* AppDelegate.swift */,
-				DCAC176D1A5BC906009DA01F /* MapViewController.swift */,
-				DCCECF991A60B2EA00CC89AF /* ListViewController.swift */,
-				DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */,
-				DCCECF9D1A60C44C00CC89AF /* MeetingQuery.swift */,
-				DCAC176F1A5BC906009DA01F /* Main.storyboard */,
-				DCAC17721A5BC907009DA01F /* Images.xcassets */,
-				DCAC17741A5BC907009DA01F /* LaunchScreen.xib */,
+				DC6911A31A617A0800EE2693 /* ViewController */,
+				DC6911A21A617A0200EE2693 /* Model */,
+				DC6911A41A617A1300EE2693 /* View */,
 				DCAC17691A5BC906009DA01F /* Supporting Files */,
 			);
 			path = Cocoaheads;
@@ -319,7 +343,7 @@
 				DCAC176E1A5BC906009DA01F /* MapViewController.swift in Sources */,
 				DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */,
 				DCCECF9A1A60B2EA00CC89AF /* ListViewController.swift in Sources */,
-				DCCECF9E1A60C44C00CC89AF /* MeetingQuery.swift in Sources */,
+				DCCECF9E1A60C44C00CC89AF /* LocationQuery.swift in Sources */,
 				DCAC176C1A5BC906009DA01F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
