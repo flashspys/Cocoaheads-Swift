@@ -67,7 +67,7 @@ class MeetingCreateViewController: UIViewController, UITextFieldDelegate, PFLogI
             // Save
             meeting.saveInBackground()
             
-            self.navigationController?.popViewControllerAnimated(true)
+            self.dismissViewControllerAnimated(true, completion: nil)
             
         }
     }

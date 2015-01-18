@@ -39,6 +39,7 @@ class MapViewController: UIViewController {
         }
         
         
+        
     }
     
     func loadLocations(locations: Array<PFObject>) {

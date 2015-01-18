@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  MeetingListViewController.swift
 //  Cocoaheads
 //
 //  Created by Felix Wehnert on 10.01.15.
@@ -8,8 +8,6 @@
 import UIKit
 
 class MeetingListViewController: PFQueryTableViewController {
-    
-//    var currentLocation: PFGeoPoint?
     
     override func queryForTable() -> PFQuery! {
         let query = Meeting.query()
@@ -29,19 +27,8 @@ class MeetingListViewController: PFQueryTableViewController {
         self.paginationEnabled = false
     }
     
-    /*
-    func callSuperDidLoad() {
-        super.viewDidLoad()
-    }
-    */
     override func viewDidLoad() {
         super.viewDidLoad()
-      /*
-        PFGeoPoint.geoPointForCurrentLocationInBackground { (geopoint: PFGeoPoint?, error: NSError?) -> Void in
-            self.currentLocation = geopoint
-            self.callSuperDidLoad()
-        }
-      */
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
@@ -65,9 +52,6 @@ class MeetingListViewController: PFQueryTableViewController {
         detailedLabelText += " in " + meeting.location.name
         
         cell?.detailTextLabel?.text = detailedLabelText
-        
-        //let distance = String(format: "%.2f", meeting.location.distanceInKilometersTo(self.currentLocation))
-        //cell?.detailTextLabel?.text = "\(distance) km"
 
         return cell as PFTableViewCell
         
@@ -77,11 +61,15 @@ class MeetingListViewController: PFQueryTableViewController {
         
         let alertController = UIAlertController(title: "Sign up for Meeting?", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
         alertController.addAction(UIAlertAction(title: "Sign up", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            
+            let meeting = self.objectAtIndexPath(indexPath) as Meeting
+            if PFUser.currentUser() != nil {
+                let registration = Registration()
+                registration.user = PFUser.currentUser()
+                registration.meeting = meeting
+                registration.saveEventually()
+            }
         }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (action) -> Void in
-            
-        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
