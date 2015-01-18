@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERg-LI-7ce">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map-->
@@ -37,32 +38,104 @@
             </objects>
             <point key="canvasLocation" x="760" y="-170"/>
         </scene>
-        <!--List-->
+        <!--Meetings-->
         <scene sceneID="Yri-LH-mrK">
             <objects>
-                <tableViewController id="yui-ef-XKb" customClass="ListViewController" customModule="Cocoaheads" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yui-ef-XKb" customClass="MeetingListViewController" customModule="Cocoaheads" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dDs-eL-pzv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Cb8-Wf-bt2">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cb8-Wf-bt2" id="Q02-mp-2wp">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="yui-ef-XKb" id="ham-U6-EwI"/>
                             <outlet property="delegate" destination="yui-ef-XKb" id="LYl-GY-XL0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="List" id="3Hb-ZY-UIC"/>
+                    <navigationItem key="navigationItem" title="Meetings" id="3Hb-ZY-UIC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pEC-Ob-W2h">
+                            <connections>
+                                <segue destination="cLL-fB-9Tq" kind="show" id="D49-X8-CvU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYg-Hj-8bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1572" y="552"/>
+        </scene>
+        <!--Meeting Create View Controller-->
+        <scene sceneID="Mgd-IS-cPc">
+            <objects>
+                <viewController id="cLL-fB-9Tq" customClass="MeetingCreateViewController" customModule="Cocoaheads" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHa-cE-fqW"/>
+                        <viewControllerLayoutGuide type="bottom" id="iJB-KJ-cAS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3el-I3-SSE" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJI-Kl-kiA">
+                                <rect key="frame" x="16" y="72" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summary" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gF-Fd-yP0">
+                                <rect key="frame" x="16" y="101" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cLL-fB-9Tq" id="Rze-id-P1W"/>
+                                </connections>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-cH-uVs">
+                                <rect key="frame" x="0.0" y="139" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="AVi-yb-eCh"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="443047131.05208302">
+                                    <!--2015-01-15 20:38:51 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDM-mp-sPM">
+                                <rect key="frame" x="277" y="309" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="6IG-tl-WGa"/>
+                                </constraints>
+                                <state key="normal" title="Create">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="create:" destination="cLL-fB-9Tq" eventType="touchUpInside" id="kN9-Ur-8zw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3gF-Fd-yP0" firstAttribute="leading" secondItem="3el-I3-SSE" secondAttribute="leadingMargin" id="4wg-kv-Clk"/>
+                            <constraint firstAttribute="trailing" secondItem="ZYP-cH-uVs" secondAttribute="trailing" id="6NY-nK-Ske"/>
+                            <constraint firstItem="ZYP-cH-uVs" firstAttribute="leading" secondItem="3el-I3-SSE" secondAttribute="leading" id="Cv5-9M-wFE"/>
+                            <constraint firstItem="ZYP-cH-uVs" firstAttribute="top" secondItem="3gF-Fd-yP0" secondAttribute="bottom" constant="8" id="Gca-8H-bAt"/>
+                            <constraint firstItem="3gF-Fd-yP0" firstAttribute="top" secondItem="dJI-Kl-kiA" secondAttribute="bottom" constant="8.5" id="Jcy-DW-A7Y"/>
+                            <constraint firstItem="HDM-mp-sPM" firstAttribute="top" secondItem="ZYP-cH-uVs" secondAttribute="bottom" constant="8" id="PnW-mF-oye"/>
+                            <constraint firstItem="dJI-Kl-kiA" firstAttribute="leading" secondItem="3el-I3-SSE" secondAttribute="leadingMargin" id="ciA-7w-ff4"/>
+                            <constraint firstAttribute="centerX" secondItem="HDM-mp-sPM" secondAttribute="centerX" id="dHa-MG-9KN"/>
+                            <constraint firstItem="3gF-Fd-yP0" firstAttribute="trailing" secondItem="3el-I3-SSE" secondAttribute="trailingMargin" id="gCh-Ei-nbL"/>
+                            <constraint firstItem="HDM-mp-sPM" firstAttribute="top" secondItem="ZYP-cH-uVs" secondAttribute="bottom" constant="8" id="kg0-1i-RMr"/>
+                            <constraint firstItem="dJI-Kl-kiA" firstAttribute="trailing" secondItem="3el-I3-SSE" secondAttribute="trailingMargin" id="q0a-yg-iae"/>
+                            <constraint firstItem="dJI-Kl-kiA" firstAttribute="top" secondItem="gHa-cE-fqW" secondAttribute="bottom" constant="8" id="skO-sH-22O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="ZYP-cH-uVs" id="rBd-IE-gXp"/>
+                        <outlet property="locationLabel" destination="dJI-Kl-kiA" id="ebA-QP-dRP"/>
+                        <outlet property="summaryTextField" destination="3gF-Fd-yP0" id="9fD-R6-EB1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ci-dv-YNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352" y="552"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GDs-sD-eM2">
@@ -83,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="-60" y="161"/>
         </scene>
-        <!--List-->
+        <!--Meetings-->
         <scene sceneID="2Ys-dR-jK4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z96-3V-fPK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" image="unorderd-list" id="BOH-Fa-stj"/>
+                    <tabBarItem key="tabBarItem" title="Meetings" image="unorderd-list" id="BOH-Fa-stj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eg4-4Y-sxl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

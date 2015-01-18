@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC4CEFE71A6887990066AC6D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4CEFE61A6887990066AC6D /* Social.framework */; };
+		DC4CEFE91A6888170066AC6D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4CEFE81A6888170066AC6D /* Accounts.framework */; };
+		DC951CE41A684E8A00790BDA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC951CE31A684E8A00790BDA /* Location.swift */; };
+		DC951CE61A684EFF00790BDA /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC951CE51A684EFF00790BDA /* Meeting.swift */; };
+		DC951CE81A685A1000790BDA /* MeetingCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC951CE71A685A1000790BDA /* MeetingCreateViewController.swift */; };
 		DCAC176C1A5BC906009DA01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC176B1A5BC906009DA01F /* AppDelegate.swift */; };
 		DCAC176E1A5BC906009DA01F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC176D1A5BC906009DA01F /* MapViewController.swift */; };
 		DCAC17711A5BC906009DA01F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC176F1A5BC906009DA01F /* Main.storyboard */; };
@@ -30,9 +35,9 @@
 		DCAC17AD1A5BD413009DA01F /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */; };
 		DCAC17AF1A5BD7C7009DA01F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */; };
 		DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */; };
-		DCCECF9A1A60B2EA00CC89AF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF991A60B2EA00CC89AF /* ListViewController.swift */; };
+		DCCECF9A1A60B2EA00CC89AF /* MeetingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF991A60B2EA00CC89AF /* MeetingListViewController.swift */; };
 		DCCECF9C1A60B3D900CC89AF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */; };
-		DCCECF9E1A60C44C00CC89AF /* LocationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF9D1A60C44C00CC89AF /* LocationQuery.swift */; };
+		DCFCBA781A6B29F500970748 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFCBA771A6B29F500970748 /* Registration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC4CEFE61A6887990066AC6D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DC4CEFE81A6888170066AC6D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		DC951CE31A684E8A00790BDA /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DC951CE51A684EFF00790BDA /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		DC951CE71A685A1000790BDA /* MeetingCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingCreateViewController.swift; sourceTree = "<group>"; };
 		DCAC17661A5BC906009DA01F /* Cocoaheads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocoaheads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAC176A1A5BC906009DA01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCAC176B1A5BC906009DA01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +84,9 @@
 		DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
-		DCCECF991A60B2EA00CC89AF /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DCCECF991A60B2EA00CC89AF /* MeetingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingListViewController.swift; sourceTree = "<group>"; };
 		DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		DCCECF9D1A60C44C00CC89AF /* LocationQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationQuery.swift; sourceTree = "<group>"; };
+		DCFCBA771A6B29F500970748 /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4CEFE91A6888170066AC6D /* Accounts.framework in Frameworks */,
+				DC4CEFE71A6887990066AC6D /* Social.framework in Frameworks */,
 				DCAC17AF1A5BD7C7009DA01F /* MapKit.framework in Frameworks */,
 				DCAC17AD1A5BD413009DA01F /* libstdc++.6.dylib in Frameworks */,
 				DCAC17A71A5BC9C5009DA01F /* libsqlite3.dylib in Frameworks */,
@@ -118,7 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */,
-				DCCECF9D1A60C44C00CC89AF /* LocationQuery.swift */,
+				DC951CE31A684E8A00790BDA /* Location.swift */,
+				DC951CE51A684EFF00790BDA /* Meeting.swift */,
+				DCFCBA771A6B29F500970748 /* Registration.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -127,7 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				DCAC176D1A5BC906009DA01F /* MapViewController.swift */,
-				DCCECF991A60B2EA00CC89AF /* ListViewController.swift */,
+				DCCECF991A60B2EA00CC89AF /* MeetingListViewController.swift */,
+				DC951CE71A685A1000790BDA /* MeetingCreateViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -202,6 +217,8 @@
 		DCAC17911A5BC947009DA01F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC4CEFE81A6888170066AC6D /* Accounts.framework */,
+				DC4CEFE61A6887990066AC6D /* Social.framework */,
 				DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */,
 				DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */,
 				DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */,
@@ -273,6 +290,7 @@
 				TargetAttributes = {
 					DCAC17651A5BC906009DA01F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = ZXT6586FS8;
 					};
 					DCAC177A1A5BC907009DA01F = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -340,11 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFCBA781A6B29F500970748 /* Registration.swift in Sources */,
+				DC951CE61A684EFF00790BDA /* Meeting.swift in Sources */,
 				DCAC176E1A5BC906009DA01F /* MapViewController.swift in Sources */,
 				DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */,
-				DCCECF9A1A60B2EA00CC89AF /* ListViewController.swift in Sources */,
-				DCCECF9E1A60C44C00CC89AF /* LocationQuery.swift in Sources */,
+				DCCECF9A1A60B2EA00CC89AF /* MeetingListViewController.swift in Sources */,
+				DC951CE81A685A1000790BDA /* MeetingCreateViewController.swift in Sources */,
 				DCAC176C1A5BC906009DA01F /* AppDelegate.swift in Sources */,
+				DC951CE41A684E8A00790BDA /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +490,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -477,6 +500,7 @@
 				INFOPLIST_FILE = Cocoaheads/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Cocoaheads/BridgingHeader.h;
 			};
 			name = Debug;
@@ -487,6 +511,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -495,6 +521,7 @@
 				INFOPLIST_FILE = Cocoaheads/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Cocoaheads/BridgingHeader.h;
 			};
 			name = Release;

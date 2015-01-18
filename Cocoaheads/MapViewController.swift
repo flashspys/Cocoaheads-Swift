@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
         
         PFGeoPoint.geoPointForCurrentLocationInBackground { (geopoint, error) -> Void in
             if (error == nil) {
-                let query = LocationQuery()
+                let query = Location.query()
                 query.whereKey("location", nearGeoPoint: geopoint)
                 query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
                     if error == nil {
