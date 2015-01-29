@@ -46,6 +46,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="meetingCellIdentifier" id="W21-gS-9EV" customClass="MeetingTableViewCell" customModule="Cocoaheads" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W21-gS-9EV" id="1za-oy-hYb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRz-kw-7tq">
+                                            <rect key="frame" x="16" y="3" width="533" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8iz-sO-39R"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xI-NJ-aKw">
+                                            <rect key="frame" x="557" y="11" width="35" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="E1g-Ct-HBy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKF-e1-43l">
+                                            <rect key="frame" x="16" y="25" width="533" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="12" id="MEj-9Z-tMe"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sKF-e1-43l" firstAttribute="width" secondItem="eRz-kw-7tq" secondAttribute="width" id="DNL-ti-I2x"/>
+                                        <constraint firstItem="sKF-e1-43l" firstAttribute="top" secondItem="1za-oy-hYb" secondAttribute="topMargin" constant="17" id="FG4-3F-DXP"/>
+                                        <constraint firstItem="eRz-kw-7tq" firstAttribute="leading" secondItem="1za-oy-hYb" secondAttribute="leadingMargin" constant="8" id="G2O-0R-ULL"/>
+                                        <constraint firstItem="eRz-kw-7tq" firstAttribute="top" secondItem="1za-oy-hYb" secondAttribute="top" constant="3" id="Nzz-qb-EmC"/>
+                                        <constraint firstItem="eRz-kw-7tq" firstAttribute="height" secondItem="sKF-e1-43l" secondAttribute="height" constant="9" id="Otg-BK-3lh"/>
+                                        <constraint firstItem="sKF-e1-43l" firstAttribute="leading" secondItem="1za-oy-hYb" secondAttribute="leadingMargin" constant="8" id="UbF-Br-AZA"/>
+                                        <constraint firstItem="eRz-kw-7tq" firstAttribute="top" secondItem="1za-oy-hYb" secondAttribute="topMargin" constant="3" id="UtM-Vw-Y0c"/>
+                                        <constraint firstItem="7xI-NJ-aKw" firstAttribute="leading" secondItem="sKF-e1-43l" secondAttribute="trailing" constant="8" id="WTi-WT-MAX"/>
+                                        <constraint firstItem="eRz-kw-7tq" firstAttribute="width" secondItem="sKF-e1-43l" secondAttribute="width" id="dPF-Ts-LHc"/>
+                                        <constraint firstItem="7xI-NJ-aKw" firstAttribute="top" secondItem="1za-oy-hYb" secondAttribute="topMargin" constant="3" id="dul-Ez-Q3C"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7xI-NJ-aKw" secondAttribute="bottom" constant="4" id="inH-Fu-pg9"/>
+                                        <constraint firstItem="7xI-NJ-aKw" firstAttribute="trailing" secondItem="1za-oy-hYb" secondAttribute="trailingMargin" id="wCR-pd-0Me"/>
+                                        <constraint firstItem="7xI-NJ-aKw" firstAttribute="leading" secondItem="eRz-kw-7tq" secondAttribute="trailing" constant="8" id="zt7-1M-snn"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Otg-BK-3lh"/>
+                                            <exclude reference="UtM-Vw-Y0c"/>
+                                            <exclude reference="dPF-Ts-LHc"/>
+                                            <exclude reference="WTi-WT-MAX"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countLabel" destination="7xI-NJ-aKw" id="HZc-Sm-vfj"/>
+                                    <outlet property="detailLabel" destination="sKF-e1-43l" id="ZqY-xv-ey0"/>
+                                    <outlet property="label" destination="eRz-kw-7tq" id="g8y-cI-a1Q"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="yui-ef-XKb" id="ham-U6-EwI"/>
                             <outlet property="delegate" destination="yui-ef-XKb" id="LYl-GY-XL0"/>
@@ -54,7 +119,7 @@
                     <navigationItem key="navigationItem" title="Meetings" id="3Hb-ZY-UIC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pEC-Ob-W2h">
                             <connections>
-                                <segue destination="cLL-fB-9Tq" kind="show" id="D49-X8-CvU"/>
+                                <segue destination="cLL-fB-9Tq" kind="show" identifier="addMeetingSegue" id="D49-X8-CvU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -89,13 +154,19 @@
                                     <outlet property="delegate" destination="cLL-fB-9Tq" id="Rze-id-P1W"/>
                                 </connections>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-cH-uVs">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-cH-uVs">
                                 <rect key="frame" x="0.0" y="139" width="600" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="AVi-yb-eCh"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="443047131.05208302">
                                     <!--2015-01-15 20:38:51 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDM-mp-sPM">

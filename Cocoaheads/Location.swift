@@ -8,7 +8,21 @@
 
 import UIKit
 
-class Location: PFObject, PFSubclassing {
+class Location: PFObject, PFSubclassing, MKAnnotation {
+    
+    // MKAnnotation override
+    
+    var title: String {
+        get {
+            return self.name;
+        }
+    }
+    
+    var coordinate: CLLocationCoordinate2D {
+        get {
+            return CLLocationCoordinate2DMake(self["location"].latitude, self["location"].longitude)
+        }
+    }
     
     @NSManaged var name: String
     @NSManaged var location: PFGeoPoint
@@ -20,5 +34,7 @@ class Location: PFObject, PFSubclassing {
     class func parseClassName() -> String! {
         return "Location"
     }
+    
+    
     
 }

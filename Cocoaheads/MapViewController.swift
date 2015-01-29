@@ -19,11 +19,12 @@ class MapViewController: UIViewController {
         PFGeoPoint.geoPointForCurrentLocationInBackground { (geopoint, error) -> Void in
             if (error == nil) {
                 let query = Location.query()
+                query.limit = 1000
                 query.whereKey("location", nearGeoPoint: geopoint)
                 query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
                     if error == nil {
-                        if let meetings = objects as? Array<PFObject> {
-                            self.loadLocations(meetings)
+                        if let location = objects as? Array<Location> {
+                            self.loadLocations(location)
                         }
                     } else {
                         if(error.code == kPFErrorCacheMiss) {
@@ -38,16 +39,11 @@ class MapViewController: UIViewController {
             }
         }
         
-        
-        
     }
     
-    func loadLocations(locations: Array<PFObject>) {
-        for meeting in locations {
-            let annotation = MapAnnotation(meeting: meeting)
-            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "MapAnnotation")
-            annotationView.centerOffset = CGPointMake(10, -20)
-            mapView.addAnnotation(annotation);
+    func loadLocations(locations: Array<Location>) {
+        for location in locations {
+            mapView.addAnnotation(location);
         }
     }
     

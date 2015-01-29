@@ -8,6 +8,10 @@
 
 import UIKit
 
+@objc protocol MeetingCreateViewDelegate {
+    optional func didCreateNewMeeting(meeting: Meeting)
+}
+
 class MeetingCreateViewController: UIViewController, UITextFieldDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
 
     @IBOutlet weak var locationLabel: UILabel!
@@ -16,9 +20,12 @@ class MeetingCreateViewController: UIViewController, UITextFieldDelegate, PFLogI
     
     var location: Location?
     
+    var delegate: MeetingCreateViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.datePicker.minimumDate = NSDate()
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: "endEditing:"))
         
@@ -42,7 +49,7 @@ class MeetingCreateViewController: UIViewController, UITextFieldDelegate, PFLogI
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func create(sender: UIButton) {
+    @IBAction func create(sender: UIButton?) {
         
         if PFUser.currentUser() == nil {
             
@@ -65,10 +72,15 @@ class MeetingCreateViewController: UIViewController, UITextFieldDelegate, PFLogI
             meeting.location = self.location!
             meeting.date = self.datePicker.date
             // Save
-            meeting.saveInBackground()
+            meeting.saveInBackgroundWithBlock({ (saved, error) -> Void in
+                if saved {
+                    self.delegate?.didCreateNewMeeting?(meeting)
+                }
+            })
             
-            self.dismissViewControllerAnimated(true, completion: nil)
             
+            
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
     
@@ -76,6 +88,44 @@ class MeetingCreateViewController: UIViewController, UITextFieldDelegate, PFLogI
         self.view.endEditing(true)
         return true
     }
+    
+    func logInViewController(logInController: PFLogInViewController!, didFailToLogInWithError error: NSError!) {
+        
+    }
+    
+    func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
+        logInController.dismissViewControllerAnimated(true, completion: nil)
+        self.create(nil)
+    }
+    
+    func logInViewController(logInController: PFLogInViewController!, shouldBeginLogInWithUsername username: String!, password: String!) -> Bool {
+        return true
+    }
+    
+    func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController!) {
+        
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
+        signUpController.dismissViewControllerAnimated(true, completion: nil)
+        self.create(nil)
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController!, shouldBeginSignUp info: [NSObject : AnyObject]!) -> Bool {
+        return true
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController!, didFailToSignUpWithError error: NSError!) {
+        
+    }
+    
+    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController!) {
+        
+    }
+    
+    // MARK: - LoginViewControllerDelegate
+    
+    
     
 
     /*

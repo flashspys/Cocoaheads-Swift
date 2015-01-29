@@ -24,12 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId( /*applicationId:*/ "4i1XnEMHmSZtGIlBF0u8ZNL60OpWUTziqxm2x5lf", clientKey: "aWkYftUxHeXmk4YEI0UwjgqtJVLoBhhpK20YOjb7")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 
+        //PFUser.logOut()
         
         let userNotificationTypes = (UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound)
         var settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
         
+        application.applicationIconBadgeNumber = 0;
         
         return true
     }

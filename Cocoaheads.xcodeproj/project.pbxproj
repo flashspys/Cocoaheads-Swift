@@ -12,6 +12,7 @@
 		DC951CE41A684E8A00790BDA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC951CE31A684E8A00790BDA /* Location.swift */; };
 		DC951CE61A684EFF00790BDA /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC951CE51A684EFF00790BDA /* Meeting.swift */; };
 		DC951CE81A685A1000790BDA /* MeetingCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC951CE71A685A1000790BDA /* MeetingCreateViewController.swift */; };
+		DCA6C4021A6D9BA00037F9C1 /* MeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C4011A6D9BA00037F9C1 /* MeetingTableViewCell.swift */; };
 		DCAC176C1A5BC906009DA01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC176B1A5BC906009DA01F /* AppDelegate.swift */; };
 		DCAC176E1A5BC906009DA01F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC176D1A5BC906009DA01F /* MapViewController.swift */; };
 		DCAC17711A5BC906009DA01F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAC176F1A5BC906009DA01F /* Main.storyboard */; };
@@ -34,7 +35,6 @@
 		DCAC17A71A5BC9C5009DA01F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17A61A5BC9C5009DA01F /* libsqlite3.dylib */; };
 		DCAC17AD1A5BD413009DA01F /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */; };
 		DCAC17AF1A5BD7C7009DA01F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */; };
-		DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */; };
 		DCCECF9A1A60B2EA00CC89AF /* MeetingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCECF991A60B2EA00CC89AF /* MeetingListViewController.swift */; };
 		DCCECF9C1A60B3D900CC89AF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */; };
 		DCFCBA781A6B29F500970748 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFCBA771A6B29F500970748 /* Registration.swift */; };
@@ -56,6 +56,7 @@
 		DC951CE31A684E8A00790BDA /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DC951CE51A684EFF00790BDA /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		DC951CE71A685A1000790BDA /* MeetingCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingCreateViewController.swift; sourceTree = "<group>"; };
+		DCA6C4011A6D9BA00037F9C1 /* MeetingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingTableViewCell.swift; sourceTree = "<group>"; };
 		DCAC17661A5BC906009DA01F /* Cocoaheads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocoaheads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAC176A1A5BC906009DA01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCAC176B1A5BC906009DA01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		DCAC17A81A5BCA66009DA01F /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		DCAC17AC1A5BD413009DA01F /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		DCAC17AE1A5BD7C7009DA01F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		DCCECF991A60B2EA00CC89AF /* MeetingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingListViewController.swift; sourceTree = "<group>"; };
 		DCCECF9B1A60B3D900CC89AF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		DCFCBA771A6B29F500970748 /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
@@ -129,7 +129,6 @@
 		DC6911A21A617A0200EE2693 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DCAC17B01A5BD920009DA01F /* MapAnnotation.swift */,
 				DC951CE31A684E8A00790BDA /* Location.swift */,
 				DC951CE51A684EFF00790BDA /* Meeting.swift */,
 				DCFCBA771A6B29F500970748 /* Registration.swift */,
@@ -150,6 +149,7 @@
 		DC6911A41A617A1300EE2693 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DCA6C4011A6D9BA00037F9C1 /* MeetingTableViewCell.swift */,
 				DCAC176F1A5BC906009DA01F /* Main.storyboard */,
 				DCAC17721A5BC907009DA01F /* Images.xcassets */,
 				DCAC17741A5BC907009DA01F /* LaunchScreen.xib */,
@@ -361,7 +361,7 @@
 				DCFCBA781A6B29F500970748 /* Registration.swift in Sources */,
 				DC951CE61A684EFF00790BDA /* Meeting.swift in Sources */,
 				DCAC176E1A5BC906009DA01F /* MapViewController.swift in Sources */,
-				DCAC17B11A5BD920009DA01F /* MapAnnotation.swift in Sources */,
+				DCA6C4021A6D9BA00037F9C1 /* MeetingTableViewCell.swift in Sources */,
 				DCCECF9A1A60B2EA00CC89AF /* MeetingListViewController.swift in Sources */,
 				DC951CE81A685A1000790BDA /* MeetingCreateViewController.swift in Sources */,
 				DCAC176C1A5BC906009DA01F /* AppDelegate.swift in Sources */,
